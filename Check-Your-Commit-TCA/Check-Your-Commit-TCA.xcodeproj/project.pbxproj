@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6480D5982BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6480D5972BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift */; };
-		6480D59A2BB152E3004C47D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6480D5992BB152E3004C47D3 /* ContentView.swift */; };
 		6480D59C2BB152E4004C47D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6480D59B2BB152E4004C47D3 /* Assets.xcassets */; };
 		6480D59F2BB152E4004C47D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6480D59E2BB152E4004C47D3 /* Preview Assets.xcassets */; };
 		6480D5A92BB152E5004C47D3 /* Check_Your_Commit_TCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6480D5A82BB152E5004C47D3 /* Check_Your_Commit_TCATests.swift */; };
@@ -20,6 +19,34 @@
 		6480D5CB2BB15945004C47D3 /* GrassView in Frameworks */ = {isa = PBXBuildFile; productRef = 6480D5CA2BB15945004C47D3 /* GrassView */; };
 		6480D5CE2BB1595E004C47D3 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 6480D5CD2BB1595E004C47D3 /* SwiftSoup */; };
 		6480D5D72BB15A79004C47D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6480D5D62BB15A79004C47D3 /* ComposableArchitecture */; };
+		64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945C72BB162AD00734159 /* Font+Extensions.swift */; };
+		64E945D32BB1631A00734159 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */; };
+		64E945D42BB1631A00734159 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */; };
+		64E945D52BB1631A00734159 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CC2BB1631900734159 /* Pretendard-ExtraLight.otf */; };
+		64E945D62BB1631A00734159 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CD2BB1631A00734159 /* Pretendard-Black.otf */; };
+		64E945D72BB1631A00734159 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CE2BB1631A00734159 /* Pretendard-Light.otf */; };
+		64E945D82BB1631A00734159 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CF2BB1631A00734159 /* Pretendard-Medium.otf */; };
+		64E945D92BB1631A00734159 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945D02BB1631A00734159 /* Pretendard-Thin.otf */; };
+		64E945DA2BB1631A00734159 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945D12BB1631A00734159 /* Pretendard-Regular.otf */; };
+		64E945DB2BB1631A00734159 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945D22BB1631A00734159 /* Pretendard-Bold.otf */; };
+		64E945DE2BB163C200734159 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945DD2BB163C200734159 /* User.swift */; };
+		64E945E02BB163F800734159 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945DF2BB163F800734159 /* LoginView.swift */; };
+		64E945E22BB163FF00734159 /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945E12BB163FF00734159 /* LoginFeature.swift */; };
+		64E945E52BB1645400734159 /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945E42BB1645400734159 /* OnboardingTabView.swift */; };
+		64E945E72BB1658400734159 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945E62BB1658400734159 /* Color+Extensions.swift */; };
+		64E945EA2BB167E400734159 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 64E945E92BB167E400734159 /* FirebaseFirestoreCombine-Community */; };
+		64E945EC2BB167E400734159 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 64E945EB2BB167E400734159 /* FirebaseFirestoreSwift */; };
+		64E945EE2BB167E400734159 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 64E945ED2BB167E400734159 /* FirebaseInAppMessaging-Beta */; };
+		64E945F12BB16A7300734159 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 64E945F02BB16A7300734159 /* Realm */; };
+		64E945F42BB16AD200734159 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945F32BB16AD200734159 /* MainView.swift */; };
+		64E945F62BB16ADA00734159 /* MainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945F52BB16ADA00734159 /* MainFeature.swift */; };
+		64E945F82BB16AE900734159 /* ProgressFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945F72BB16AE900734159 /* ProgressFeature.swift */; };
+		64E945FA2BB16AEF00734159 /* TodoFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945F92BB16AEF00734159 /* TodoFeature.swift */; };
+		64E945FC2BB16AF900734159 /* GrassFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945FB2BB16AF900734159 /* GrassFeature.swift */; };
+		64E945FE2BB16B1700734159 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945FD2BB16B1700734159 /* RealmManager.swift */; };
+		64E946002BB16B6200734159 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945FF2BB16B6200734159 /* ProgressView.swift */; };
+		64E946022BB16B6800734159 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E946012BB16B6800734159 /* TodoView.swift */; };
+		64E946042BB16B6E00734159 /* GrassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E946032BB16B6E00734159 /* GrassView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +69,6 @@
 /* Begin PBXFileReference section */
 		6480D5942BB152E3004C47D3 /* Check-Your-Commit-TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Check-Your-Commit-TCA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6480D5972BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check_Your_Commit_TCAApp.swift; sourceTree = "<group>"; };
-		6480D5992BB152E3004C47D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6480D59B2BB152E4004C47D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6480D59E2BB152E4004C47D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6480D5A42BB152E5004C47D3 /* Check-Your-Commit-TCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Check-Your-Commit-TCATests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +76,31 @@
 		6480D5AE2BB152E5004C47D3 /* Check-Your-Commit-TCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Check-Your-Commit-TCAUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6480D5B22BB152E5004C47D3 /* Check_Your_Commit_TCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check_Your_Commit_TCAUITests.swift; sourceTree = "<group>"; };
 		6480D5B42BB152E5004C47D3 /* Check_Your_Commit_TCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check_Your_Commit_TCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64E945C72BB162AD00734159 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		64E945CC2BB1631900734159 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		64E945CD2BB1631A00734159 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		64E945CE2BB1631A00734159 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		64E945CF2BB1631A00734159 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		64E945D02BB1631A00734159 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		64E945D12BB1631A00734159 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		64E945D22BB1631A00734159 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		64E945DC2BB1636C00734159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		64E945DD2BB163C200734159 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		64E945DF2BB163F800734159 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		64E945E12BB163FF00734159 /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
+		64E945E42BB1645400734159 /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
+		64E945E62BB1658400734159 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		64E945F32BB16AD200734159 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		64E945F52BB16ADA00734159 /* MainFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeature.swift; sourceTree = "<group>"; };
+		64E945F72BB16AE900734159 /* ProgressFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressFeature.swift; sourceTree = "<group>"; };
+		64E945F92BB16AEF00734159 /* TodoFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFeature.swift; sourceTree = "<group>"; };
+		64E945FB2BB16AF900734159 /* GrassFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassFeature.swift; sourceTree = "<group>"; };
+		64E945FD2BB16B1700734159 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		64E945FF2BB16B6200734159 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		64E946012BB16B6800734159 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		64E946032BB16B6E00734159 /* GrassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +110,14 @@
 			files = (
 				6480D5CB2BB15945004C47D3 /* GrassView in Frameworks */,
 				6480D5C82BB158F9004C47D3 /* FirebaseMessaging in Frameworks */,
+				64E945EE2BB167E400734159 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				6480D5D72BB15A79004C47D3 /* ComposableArchitecture in Frameworks */,
+				64E945F12BB16A7300734159 /* Realm in Frameworks */,
 				6480D5C32BB15473004C47D3 /* Alamofire in Frameworks */,
 				6480D5C62BB158F9004C47D3 /* FirebaseFirestore in Frameworks */,
 				6480D5CE2BB1595E004C47D3 /* SwiftSoup in Frameworks */,
+				64E945EA2BB167E400734159 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				64E945EC2BB167E400734159 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,11 +161,13 @@
 		6480D5962BB152E3004C47D3 /* Check-Your-Commit-TCA */ = {
 			isa = PBXGroup;
 			children = (
+				64E945DC2BB1636C00734159 /* Info.plist */,
+				6480D59B2BB152E4004C47D3 /* Assets.xcassets */,
 				6480D5D42BB15A1A004C47D3 /* App */,
 				6480D5D02BB15969004C47D3 /* Feature */,
 				6480D5CF2BB15966004C47D3 /* Core */,
-				6480D5992BB152E3004C47D3 /* ContentView.swift */,
-				6480D59B2BB152E4004C47D3 /* Assets.xcassets */,
+				64E945C62BB1627100734159 /* Model */,
+				64E945C92BB162C000734159 /* Fonts */,
 				6480D59D2BB152E4004C47D3 /* Preview Content */,
 			);
 			path = "Check-Your-Commit-TCA";
@@ -144,6 +201,7 @@
 		6480D5CF2BB15966004C47D3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				64E945E32BB1644900734159 /* Component */,
 				6480D5D22BB15974004C47D3 /* Extension */,
 				6480D5D32BB15979004C47D3 /* Service */,
 			);
@@ -153,6 +211,11 @@
 		6480D5D02BB15969004C47D3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				64E945F22BB16AC700734159 /* Main */,
+				64E945C42BB1626400734159 /* Progress */,
+				64E945C32BB1625F00734159 /* Todo */,
+				64E945C22BB1625900734159 /* Grass */,
+				64E945C12BB1625400734159 /* Login */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -160,6 +223,8 @@
 		6480D5D22BB15974004C47D3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				64E945C72BB162AD00734159 /* Font+Extensions.swift */,
+				64E945E62BB1658400734159 /* Color+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -167,6 +232,7 @@
 		6480D5D32BB15979004C47D3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				64E945FD2BB16B1700734159 /* RealmManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -177,6 +243,83 @@
 				6480D5972BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		64E945C12BB1625400734159 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				64E945DF2BB163F800734159 /* LoginView.swift */,
+				64E945E12BB163FF00734159 /* LoginFeature.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		64E945C22BB1625900734159 /* Grass */ = {
+			isa = PBXGroup;
+			children = (
+				64E946032BB16B6E00734159 /* GrassView.swift */,
+				64E945FB2BB16AF900734159 /* GrassFeature.swift */,
+			);
+			path = Grass;
+			sourceTree = "<group>";
+		};
+		64E945C32BB1625F00734159 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				64E946012BB16B6800734159 /* TodoView.swift */,
+				64E945F92BB16AEF00734159 /* TodoFeature.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		64E945C42BB1626400734159 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				64E945FF2BB16B6200734159 /* ProgressView.swift */,
+				64E945F72BB16AE900734159 /* ProgressFeature.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		64E945C62BB1627100734159 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64E945DD2BB163C200734159 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64E945C92BB162C000734159 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				64E945CD2BB1631A00734159 /* Pretendard-Black.otf */,
+				64E945D22BB1631A00734159 /* Pretendard-Bold.otf */,
+				64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */,
+				64E945CC2BB1631900734159 /* Pretendard-ExtraLight.otf */,
+				64E945CE2BB1631A00734159 /* Pretendard-Light.otf */,
+				64E945CF2BB1631A00734159 /* Pretendard-Medium.otf */,
+				64E945D12BB1631A00734159 /* Pretendard-Regular.otf */,
+				64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */,
+				64E945D02BB1631A00734159 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		64E945E32BB1644900734159 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				64E945E42BB1645400734159 /* OnboardingTabView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		64E945F22BB16AC700734159 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				64E945F32BB16AD200734159 /* MainView.swift */,
+				64E945F52BB16ADA00734159 /* MainFeature.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +345,10 @@
 				6480D5CA2BB15945004C47D3 /* GrassView */,
 				6480D5CD2BB1595E004C47D3 /* SwiftSoup */,
 				6480D5D62BB15A79004C47D3 /* ComposableArchitecture */,
+				64E945E92BB167E400734159 /* FirebaseFirestoreCombine-Community */,
+				64E945EB2BB167E400734159 /* FirebaseFirestoreSwift */,
+				64E945ED2BB167E400734159 /* FirebaseInAppMessaging-Beta */,
+				64E945F02BB16A7300734159 /* Realm */,
 			);
 			productName = "Check-Your-Commit-TCA";
 			productReference = 6480D5942BB152E3004C47D3 /* Check-Your-Commit-TCA.app */;
@@ -281,6 +428,7 @@
 				6480D5C92BB15945004C47D3 /* XCRemoteSwiftPackageReference "GrassView" */,
 				6480D5CC2BB1595E004C47D3 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				6480D5D52BB15A79004C47D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				64E945EF2BB16A7300734159 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 6480D5952BB152E3004C47D3 /* Products */;
 			projectDirPath = "";
@@ -298,7 +446,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E945DB2BB1631A00734159 /* Pretendard-Bold.otf in Resources */,
+				64E945D32BB1631A00734159 /* Pretendard-SemiBold.otf in Resources */,
 				6480D59F2BB152E4004C47D3 /* Preview Assets.xcassets in Resources */,
+				64E945D52BB1631A00734159 /* Pretendard-ExtraLight.otf in Resources */,
+				64E945D92BB1631A00734159 /* Pretendard-Thin.otf in Resources */,
+				64E945D82BB1631A00734159 /* Pretendard-Medium.otf in Resources */,
+				64E945D42BB1631A00734159 /* Pretendard-ExtraBold.otf in Resources */,
+				64E945D72BB1631A00734159 /* Pretendard-Light.otf in Resources */,
+				64E945DA2BB1631A00734159 /* Pretendard-Regular.otf in Resources */,
+				64E945D62BB1631A00734159 /* Pretendard-Black.otf in Resources */,
 				6480D59C2BB152E4004C47D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +481,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6480D59A2BB152E3004C47D3 /* ContentView.swift in Sources */,
+				64E945FE2BB16B1700734159 /* RealmManager.swift in Sources */,
+				64E945DE2BB163C200734159 /* User.swift in Sources */,
+				64E945F42BB16AD200734159 /* MainView.swift in Sources */,
+				64E945F62BB16ADA00734159 /* MainFeature.swift in Sources */,
+				64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */,
+				64E946042BB16B6E00734159 /* GrassView.swift in Sources */,
+				64E945E22BB163FF00734159 /* LoginFeature.swift in Sources */,
+				64E945FC2BB16AF900734159 /* GrassFeature.swift in Sources */,
+				64E945E72BB1658400734159 /* Color+Extensions.swift in Sources */,
+				64E945FA2BB16AEF00734159 /* TodoFeature.swift in Sources */,
+				64E945E52BB1645400734159 /* OnboardingTabView.swift in Sources */,
+				64E945F82BB16AE900734159 /* ProgressFeature.swift in Sources */,
+				64E946002BB16B6200734159 /* ProgressView.swift in Sources */,
+				64E946022BB16B6800734159 /* TodoView.swift in Sources */,
+				64E945E02BB163F800734159 /* LoginView.swift in Sources */,
 				6480D5982BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -471,7 +642,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -492,6 +663,7 @@
 				DEVELOPMENT_TEAM = KKR332Q2BZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Check-Your-Commit-TCA/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -522,6 +694,7 @@
 				DEVELOPMENT_TEAM = KKR332Q2BZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Check-Your-Commit-TCA/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -701,6 +874,14 @@
 				minimumVersion = 1.9.2;
 			};
 		};
+		64E945EF2BB16A7300734159 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -733,6 +914,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6480D5D52BB15A79004C47D3 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		64E945E92BB167E400734159 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6480D5C42BB158F9004C47D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		64E945EB2BB167E400734159 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6480D5C42BB158F9004C47D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		64E945ED2BB167E400734159 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6480D5C42BB158F9004C47D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		64E945F02BB16A7300734159 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E945EF2BB16A7300734159 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -25,32 +25,22 @@ struct LoginView: View {
                 }
                 
                 // MARK: - Github 소셜 로그인 버튼
-//                Link(destination: loginModel.loginURL ?? URL(string: "")!,
-//                     label: {
-//                    Image("githubbutton")
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 350, height: 50)
-//                })
-//                .padding()
-//                .onOpenURL(perform: { url in
-//                    Task{
-//                            let success = await loginModel.handleCodeFromURL(url)
-//                            if success{
-//                                await loginModel.get_access_token()
-//                                isloggedInVIew = true
-//                            }
-//                        }
-//                })
-//                
-                Button {
-                    store.send(.loginButtonTapped)
-                } label: {
+                Link(destination: LoginManager.shared.requestCode() ?? URL(string: "")!,
+                     label: {
                     Image("githubbutton")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350, height: 50)
-                }
+                })
+                .padding()
+                .onOpenURL(perform: { url in
+                    Task{
+                        let success = await LoginManager.shared.handleCodeFromURL(url)
+                            if success{
+                                await LoginManager.shared.get_access_token()
+                            }
+                        }
+                })
 
                 Text("2024, Check Your Commit all rights reserved.\nPowered by 4T2F")
                     .font(.pretendardLight_11)

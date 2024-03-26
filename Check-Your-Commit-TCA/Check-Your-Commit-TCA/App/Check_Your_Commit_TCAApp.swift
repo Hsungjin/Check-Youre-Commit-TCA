@@ -10,14 +10,14 @@ import SwiftUI
 
 @main
 struct Check_Your_Commit_TCAApp: App {
-    static let store = Store(initialState: LoginFeature.State()) {
-      LoginFeature()
+    static let store = Store(initialState: MainFeature.State()) {
+      MainFeature()
     }
     
     
     var body: some Scene {
         WindowGroup {
-            LoginView(store: Check_Your_Commit_TCAApp.store)
+            MainView(store: Check_Your_Commit_TCAApp.store)
         }
     }
 }

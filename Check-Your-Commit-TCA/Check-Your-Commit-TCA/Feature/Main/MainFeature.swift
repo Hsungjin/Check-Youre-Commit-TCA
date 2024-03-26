@@ -12,16 +12,20 @@ import Foundation
 struct MainFeature {
     @ObservableState
     struct State {
-        
+        var loginState: Bool = false
     }
     
     enum Action {
-        
+        case getLoginState
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
-            return .none
+            switch action {
+            case .getLoginState:
+                state.loginState = UserDefaults.standard.getLoginState()!
+                return .none
+            }
         }
     }
 }

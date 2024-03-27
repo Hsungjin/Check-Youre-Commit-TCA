@@ -13,14 +13,23 @@ struct MainFeature {
     @ObservableState
     struct State {
         @Presents var setting: SettingFeature.State?
+        
+        var progress = ProgressFeature.State()
     }
     
     enum Action {
         case setting(PresentationAction<SettingFeature.Action>)
+        
+        case progress(ProgressFeature.Action)
+        
         case settingButtonTapped
     }
     
     var body: some ReducerOf<Self> {
+        Scope(state: \.progress, action: \.progress) {
+            ProgressFeature()
+        }
+        
         Reduce { state, action in
             switch action {
             case .settingButtonTapped:
@@ -28,7 +37,10 @@ struct MainFeature {
                 return .none
                 
             case .setting(_):
-                return.none
+                return .none
+                
+            case .progress(_):
+                return .none
             }
         }
         .ifLet(\.$setting, action: \.setting) {

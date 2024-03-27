@@ -8,22 +8,7 @@
 import SwiftUI
 
 struct NotificationView: View {
-    
     @AppStorage("notification") var isOnNotification: Bool = UserDefaults.standard.bool(forKey: "notification")
-    @Environment(\.dismiss) var dismiss
-    
-    var backButton : some View {  // <-- 👀 커스텀 버튼
-        Button{
-            dismiss()
-        } label: {
-            HStack {
-                Image(systemName: "chevron.left") // 화살표 Image
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.gray)
-                    .bold()
-            }
-        }
-    }
     
     var body: some View {
         ZStack {
@@ -57,7 +42,7 @@ struct NotificationView: View {
         .navigationTitle("알림 설정")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: BackButtonView())
     }
     
     func techNotification() {
@@ -83,8 +68,4 @@ struct NotificationView: View {
 //            LocalNotificationHelper.shared.printPendingNotification()
 //        }
     }
-}
-
-#Preview {
-    AboutView()
 }

@@ -48,13 +48,6 @@ struct MainView: View {
                                 .frame(width: 25)
                                 .foregroundStyle(.gray)
                         }
-//                        NavigationLink(destination: SettingView()) {
-//                            Image(systemName: "gearshape.fill")
-//                                .resizable()
-//                                .scaledToFit()
-//                                .frame(width: 25)
-//                                .foregroundStyle(.gray)
-//                        }
                     }
                     .padding(.horizontal, 22)
                     .padding(.vertical)
@@ -70,7 +63,7 @@ struct MainView: View {
                         .padding(.leading, 25)
                         
                         // MARK: - 하단 뷰 연결
-                        ProgressView()
+                        ProgressView(store: store.scope(state: \.progress, action: \.progress))
                         
                         // MARK: - 잔디 뷰 연결
 //                        CommitView()

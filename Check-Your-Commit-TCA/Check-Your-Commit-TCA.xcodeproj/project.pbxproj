@@ -27,6 +27,11 @@
 		64A47B822BB3487B000E6D77 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B812BB3487B000E6D77 /* NotificationView.swift */; };
 		64A47B842BB348BD000E6D77 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B832BB348BD000E6D77 /* AboutView.swift */; };
 		64A47B862BB34D3E000E6D77 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B852BB34D3E000E6D77 /* License.swift */; };
+		64A47B882BB3F53E000E6D77 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B872BB3F53E000E6D77 /* BackButtonView.swift */; };
+		64A47B8A2BB46207000E6D77 /* PrograssBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B892BB46207000E6D77 /* PrograssBarView.swift */; };
+		64A47B8C2BB46212000E6D77 /* DdayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B8B2BB46212000E6D77 /* DdayButtonView.swift */; };
+		64A47B8E2BB4621E000E6D77 /* ProgressTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B8D2BB4621E000E6D77 /* ProgressTextView.swift */; };
+		64A47B902BB46226000E6D77 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B8F2BB46226000E6D77 /* ModalView.swift */; };
 		64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945C72BB162AD00734159 /* Font+Extensions.swift */; };
 		64E945D32BB1631A00734159 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */; };
 		64E945D42BB1631A00734159 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */; };
@@ -96,6 +101,11 @@
 		64A47B812BB3487B000E6D77 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		64A47B832BB348BD000E6D77 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		64A47B852BB34D3E000E6D77 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		64A47B872BB3F53E000E6D77 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		64A47B892BB46207000E6D77 /* PrograssBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrograssBarView.swift; sourceTree = "<group>"; };
+		64A47B8B2BB46212000E6D77 /* DdayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayButtonView.swift; sourceTree = "<group>"; };
+		64A47B8D2BB4621E000E6D77 /* ProgressTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTextView.swift; sourceTree = "<group>"; };
+		64A47B8F2BB46226000E6D77 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		64E945C72BB162AD00734159 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -282,6 +292,9 @@
 			children = (
 				64A47B782BB3440F000E6D77 /* SettingView.swift */,
 				64A47B7A2BB34418000E6D77 /* SettingFeature.swift */,
+				64A47B7F2BB3486C000E6D77 /* LicenseView.swift */,
+				64A47B812BB3487B000E6D77 /* NotificationView.swift */,
+				64A47B832BB348BD000E6D77 /* AboutView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -317,6 +330,10 @@
 			children = (
 				64E945FF2BB16B6200734159 /* ProgressView.swift */,
 				64E945F72BB16AE900734159 /* ProgressFeature.swift */,
+				64A47B892BB46207000E6D77 /* PrograssBarView.swift */,
+				64A47B8B2BB46212000E6D77 /* DdayButtonView.swift */,
+				64A47B8D2BB4621E000E6D77 /* ProgressTextView.swift */,
+				64A47B8F2BB46226000E6D77 /* ModalView.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -352,9 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				64E945E42BB1645400734159 /* OnboardingTabView.swift */,
-				64A47B7F2BB3486C000E6D77 /* LicenseView.swift */,
-				64A47B812BB3487B000E6D77 /* NotificationView.swift */,
-				64A47B832BB348BD000E6D77 /* AboutView.swift */,
+				64A47B872BB3F53E000E6D77 /* BackButtonView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -550,13 +565,18 @@
 				64E945FC2BB16AF900734159 /* GrassFeature.swift in Sources */,
 				64E946132BB1796500734159 /* key.swift in Sources */,
 				64E945E72BB1658400734159 /* Color+Extensions.swift in Sources */,
+				64A47B882BB3F53E000E6D77 /* BackButtonView.swift in Sources */,
+				64A47B8E2BB4621E000E6D77 /* ProgressTextView.swift in Sources */,
 				64E945FA2BB16AEF00734159 /* TodoFeature.swift in Sources */,
+				64A47B902BB46226000E6D77 /* ModalView.swift in Sources */,
 				64E945E52BB1645400734159 /* OnboardingTabView.swift in Sources */,
 				64A47B862BB34D3E000E6D77 /* License.swift in Sources */,
 				64E945F82BB16AE900734159 /* ProgressFeature.swift in Sources */,
 				64E946002BB16B6200734159 /* ProgressView.swift in Sources */,
 				64A47B802BB3486C000E6D77 /* LicenseView.swift in Sources */,
+				64A47B8C2BB46212000E6D77 /* DdayButtonView.swift in Sources */,
 				64A47B822BB3487B000E6D77 /* NotificationView.swift in Sources */,
+				64A47B8A2BB46207000E6D77 /* PrograssBarView.swift in Sources */,
 				64E946022BB16B6800734159 /* TodoView.swift in Sources */,
 				64E945E02BB163F800734159 /* LoginView.swift in Sources */,
 				64E946102BB1759B00734159 /* LoginManager.swift in Sources */,

@@ -6,7 +6,15 @@
 //
 
 import RealmSwift
+import SwiftUI
 
-class Todo {
-    
+struct TodoModel: Identifiable {
+    var id = UUID()
+    var title: String
+    var createdAt = Date()
+    var completed = false
+
+    init(title: String = "") {
+        self.title = title
+    }
 }

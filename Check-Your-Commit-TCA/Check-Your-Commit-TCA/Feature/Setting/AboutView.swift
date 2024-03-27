@@ -9,20 +9,6 @@ import SwiftUI
 
 struct AboutView: View {
     @State private var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
-    @Environment(\.dismiss) var dismiss
-    
-    var backButton : some View {  // <-- 👀 커스텀 버튼
-        Button{
-            dismiss()
-        } label: {
-            HStack {
-                Image(systemName: "chevron.left") // 화살표 Image
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.gray)
-                    .bold()
-            }
-        }
-    }
     
     var body: some View {
         NavigationStack {
@@ -88,10 +74,6 @@ struct AboutView: View {
         .navigationTitle("CYC에 대해서")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: BackButtonView())
     }
-}
-
-#Preview {
-    AboutView()
 }

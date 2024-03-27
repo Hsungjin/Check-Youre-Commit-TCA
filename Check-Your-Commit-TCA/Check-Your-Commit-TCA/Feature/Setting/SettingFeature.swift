@@ -13,10 +13,12 @@ struct SettingFeature {
     @ObservableState
     struct State: Equatable {
         var setting: IdentifiedArrayOf<SettingModel> = []
+        var isShowingAlert: Bool = false
     }
     
     enum Action {
         case getSetting
+        case showingAlert(Bool)
     }
     
     var body: some ReducerOf<Self> {
@@ -30,6 +32,9 @@ struct SettingFeature {
                 ]
                 return .none
                 
+            case let .showingAlert(input):
+                state.isShowingAlert = input
+                return .none
             }
         }
     }

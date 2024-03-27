@@ -8,26 +8,10 @@
 import SwiftUI
 
 struct LicenseView: View {
-    
-    @Environment(\.dismiss) var dismiss
-    
     let licenseInfo:[LicenseModel] = [
         LicenseModel(text: "이모티콘: Desingned by Flaticon", destination: "https://www.flaticon.com/kr/free-icon/birthday_817754?term=%EA%B3%B5%EB%A3%A1&page=1&position=10&origin=search&related_id=817754"),
         LicenseModel(text: "폰트: Pretendard", destination: "https://cactus.tistory.com/306"),
     ]
-    
-    var backButton : some View {  // <-- 👀 커스텀 버튼
-        Button{
-            dismiss()
-        } label: {
-            HStack {
-                Image(systemName: "chevron.left") // 화살표 Image
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.gray)
-                    .bold()
-            }
-        }
-    }
     
     var body: some View {
         ZStack {
@@ -59,6 +43,6 @@ struct LicenseView: View {
         .navigationTitle("라이센스")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: BackButtonView())
     }
 }

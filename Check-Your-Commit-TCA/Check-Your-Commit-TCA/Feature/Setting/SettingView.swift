@@ -10,25 +10,8 @@ import SwiftUI
 
 struct SettingView: View {
     @Bindable var store: StoreOf<SettingFeature>
-    
-    @Environment(\.dismiss) var dismiss
-    
+        
     @AppStorage("isLoggedIn") var isloggedInVIew: Bool = true
-    
-    @State private var showingAlert = false
-    
-    var backButton : some View {
-        Button{
-            dismiss()
-        } label: {
-            HStack {
-                Image(systemName: "chevron.left") // 화살표 Image
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.gray)
-                    .bold()
-            }
-        }
-    }
     
     var body: some View {
         NavigationStack {
@@ -62,7 +45,7 @@ struct SettingView: View {
                         
                         // MARK: - 로그아웃
                         Button {
-                            showingAlert.toggle()
+                            store.send(.showingAlert(true))
                         } label: {
                             HStack(spacing: 18) {
                                 Image("trash")
@@ -76,14 +59,14 @@ struct SettingView: View {
                             .foregroundStyle(.logout)
                             .padding(.top, 8)
                         }
-                        .alert("정말 로그아웃 하시겠어요?", isPresented: $showingAlert) {
+                        .alert("정말 로그아웃 하시겠어요?", isPresented: $store.isShowingAlert.sending(\.showingAlert)) {
                             Button("로그아웃", role: .destructive) {
                                 //                                    loginModel.logout()
                                 isloggedInVIew = false
                             }
                             
                             Button("닫기", role: .cancel) {
-                                showingAlert = false
+                                store.send(.showingAlert(false))
                             }
                         }
                     }
@@ -104,7 +87,7 @@ struct SettingView: View {
             .navigationTitle("설정")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: backButton)
+            .navigationBarItems(leading: BackButtonView())
             .onAppear {
                 store.send(.getSetting)
             }

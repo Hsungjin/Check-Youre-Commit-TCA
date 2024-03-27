@@ -9,3 +9,4 @@ import Foundation
 
 let client_id = Bundle.main.infoDictionary?["CLIENT_ID"] ?? ""
 let client_secret = Bundle.main.infoDictionary?["CLIENT_SECRET"] ?? ""
+let redirectURL = "Check-Your-Commit-TCA://callback"

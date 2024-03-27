@@ -9,8 +9,8 @@ import ComposableArchitecture
 import SwiftUI
 
 struct LoginView: View {
-    let store: StoreOf<LoginFeature>
-    
+    @AppStorage("isLoggedIn") var isloggedInVIew: Bool = false
+
     var body: some View {
         ZStack {
             Color.bgColor.ignoresSafeArea(.all)
@@ -38,6 +38,7 @@ struct LoginView: View {
                         let success = await LoginManager.shared.handleCodeFromURL(url)
                             if success{
                                 await LoginManager.shared.get_access_token()
+                                isloggedInVIew = true
                             }
                         }
                 })

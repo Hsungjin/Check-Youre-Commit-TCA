@@ -14,7 +14,7 @@ extension UserDefaults {
         set(login, forKey: UserDefaults.isUserLogin)
     }
     
-    func getLoginState() -> Bool? {
+    func getLoginState() -> Bool {
         return bool(forKey: UserDefaults.isUserLogin)
     }
 }

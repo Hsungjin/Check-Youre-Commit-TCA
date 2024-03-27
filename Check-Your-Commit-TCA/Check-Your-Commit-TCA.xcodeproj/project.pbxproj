@@ -19,6 +19,14 @@
 		6480D5CB2BB15945004C47D3 /* GrassView in Frameworks */ = {isa = PBXBuildFile; productRef = 6480D5CA2BB15945004C47D3 /* GrassView */; };
 		6480D5CE2BB1595E004C47D3 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 6480D5CD2BB1595E004C47D3 /* SwiftSoup */; };
 		6480D5D72BB15A79004C47D3 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6480D5D62BB15A79004C47D3 /* ComposableArchitecture */; };
+		64A47B762BB34157000E6D77 /* EnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B752BB34157000E6D77 /* EnterView.swift */; };
+		64A47B792BB3440F000E6D77 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B782BB3440F000E6D77 /* SettingView.swift */; };
+		64A47B7B2BB34418000E6D77 /* SettingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B7A2BB34418000E6D77 /* SettingFeature.swift */; };
+		64A47B7D2BB347A4000E6D77 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B7C2BB347A4000E6D77 /* Setting.swift */; };
+		64A47B802BB3486C000E6D77 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B7F2BB3486C000E6D77 /* LicenseView.swift */; };
+		64A47B822BB3487B000E6D77 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B812BB3487B000E6D77 /* NotificationView.swift */; };
+		64A47B842BB348BD000E6D77 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B832BB348BD000E6D77 /* AboutView.swift */; };
+		64A47B862BB34D3E000E6D77 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B852BB34D3E000E6D77 /* License.swift */; };
 		64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945C72BB162AD00734159 /* Font+Extensions.swift */; };
 		64E945D32BB1631A00734159 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */; };
 		64E945D42BB1631A00734159 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */; };
@@ -31,7 +39,6 @@
 		64E945DB2BB1631A00734159 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945D22BB1631A00734159 /* Pretendard-Bold.otf */; };
 		64E945DE2BB163C200734159 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945DD2BB163C200734159 /* User.swift */; };
 		64E945E02BB163F800734159 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945DF2BB163F800734159 /* LoginView.swift */; };
-		64E945E22BB163FF00734159 /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945E12BB163FF00734159 /* LoginFeature.swift */; };
 		64E945E52BB1645400734159 /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945E42BB1645400734159 /* OnboardingTabView.swift */; };
 		64E945E72BB1658400734159 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945E62BB1658400734159 /* Color+Extensions.swift */; };
 		64E945EA2BB167E400734159 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 64E945E92BB167E400734159 /* FirebaseFirestoreCombine-Community */; };
@@ -81,6 +88,14 @@
 		6480D5AE2BB152E5004C47D3 /* Check-Your-Commit-TCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Check-Your-Commit-TCAUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6480D5B22BB152E5004C47D3 /* Check_Your_Commit_TCAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check_Your_Commit_TCAUITests.swift; sourceTree = "<group>"; };
 		6480D5B42BB152E5004C47D3 /* Check_Your_Commit_TCAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check_Your_Commit_TCAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		64A47B752BB34157000E6D77 /* EnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterView.swift; sourceTree = "<group>"; };
+		64A47B782BB3440F000E6D77 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		64A47B7A2BB34418000E6D77 /* SettingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFeature.swift; sourceTree = "<group>"; };
+		64A47B7C2BB347A4000E6D77 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		64A47B7F2BB3486C000E6D77 /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
+		64A47B812BB3487B000E6D77 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		64A47B832BB348BD000E6D77 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		64A47B852BB34D3E000E6D77 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		64E945C72BB162AD00734159 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -94,7 +109,6 @@
 		64E945DC2BB1636C00734159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		64E945DD2BB163C200734159 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		64E945DF2BB163F800734159 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		64E945E12BB163FF00734159 /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
 		64E945E42BB1645400734159 /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
 		64E945E62BB1658400734159 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		64E945F32BB16AD200734159 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -226,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				64E945F22BB16AC700734159 /* Main */,
+				64A47B772BB34406000E6D77 /* Setting */,
 				64E945C42BB1626400734159 /* Progress */,
 				64E945C32BB1625F00734159 /* Todo */,
 				64E945C22BB1625900734159 /* Grass */,
@@ -257,15 +272,24 @@
 			isa = PBXGroup;
 			children = (
 				6480D5972BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift */,
+				64A47B752BB34157000E6D77 /* EnterView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		64A47B772BB34406000E6D77 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				64A47B782BB3440F000E6D77 /* SettingView.swift */,
+				64A47B7A2BB34418000E6D77 /* SettingFeature.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		64E945C12BB1625400734159 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				64E945DF2BB163F800734159 /* LoginView.swift */,
-				64E945E12BB163FF00734159 /* LoginFeature.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -302,6 +326,8 @@
 			children = (
 				64E945DD2BB163C200734159 /* User.swift */,
 				64E946052BB16ED300734159 /* Todo.swift */,
+				64A47B7C2BB347A4000E6D77 /* Setting.swift */,
+				64A47B852BB34D3E000E6D77 /* License.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +352,9 @@
 			isa = PBXGroup;
 			children = (
 				64E945E42BB1645400734159 /* OnboardingTabView.swift */,
+				64A47B7F2BB3486C000E6D77 /* LicenseView.swift */,
+				64A47B812BB3487B000E6D77 /* NotificationView.swift */,
+				64A47B832BB348BD000E6D77 /* AboutView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -509,18 +538,25 @@
 				64E945FE2BB16B1700734159 /* RealmManager.swift in Sources */,
 				64E945DE2BB163C200734159 /* User.swift in Sources */,
 				64E9460D2BB1725D00734159 /* Userdefaults+Extensions.swift in Sources */,
+				64A47B792BB3440F000E6D77 /* SettingView.swift in Sources */,
+				64A47B842BB348BD000E6D77 /* AboutView.swift in Sources */,
 				64E945F42BB16AD200734159 /* MainView.swift in Sources */,
+				64A47B7B2BB34418000E6D77 /* SettingFeature.swift in Sources */,
+				64A47B7D2BB347A4000E6D77 /* Setting.swift in Sources */,
 				64E945F62BB16ADA00734159 /* MainFeature.swift in Sources */,
 				64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */,
 				64E946042BB16B6E00734159 /* GrassView.swift in Sources */,
-				64E945E22BB163FF00734159 /* LoginFeature.swift in Sources */,
+				64A47B762BB34157000E6D77 /* EnterView.swift in Sources */,
 				64E945FC2BB16AF900734159 /* GrassFeature.swift in Sources */,
 				64E946132BB1796500734159 /* key.swift in Sources */,
 				64E945E72BB1658400734159 /* Color+Extensions.swift in Sources */,
 				64E945FA2BB16AEF00734159 /* TodoFeature.swift in Sources */,
 				64E945E52BB1645400734159 /* OnboardingTabView.swift in Sources */,
+				64A47B862BB34D3E000E6D77 /* License.swift in Sources */,
 				64E945F82BB16AE900734159 /* ProgressFeature.swift in Sources */,
 				64E946002BB16B6200734159 /* ProgressView.swift in Sources */,
+				64A47B802BB3486C000E6D77 /* LicenseView.swift in Sources */,
+				64A47B822BB3487B000E6D77 /* NotificationView.swift in Sources */,
 				64E946022BB16B6800734159 /* TodoView.swift in Sources */,
 				64E945E02BB163F800734159 /* LoginView.swift in Sources */,
 				64E946102BB1759B00734159 /* LoginManager.swift in Sources */,

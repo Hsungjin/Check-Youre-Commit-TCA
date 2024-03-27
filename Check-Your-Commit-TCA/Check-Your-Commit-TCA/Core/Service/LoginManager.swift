@@ -17,7 +17,6 @@ class LoginManager {
     private let scope: String = "repo gist user"
     private let githubURL: String = "https://github.com"
     private let githubApiURL: String = "https://api.github.com"
-    private let redirectURL = "Check-Your-Commit-TCA://callback"
     private var code = ""
     
     // 깃허브 api 에서 제공하는 형식의 로그인 페이지 연결 URL
@@ -71,10 +70,7 @@ class LoginManager {
                                                 headers: headers).serializingDecodable(User.self).value
             UserDefaults.standard.setUserLogin(response.login)
             UserDefaults.standard.setUserName(response.name)
-            print(UserDefaults.standard.getUserName()!)
-            print(UserDefaults.standard.getUserLogin()!)
-            UserDefaults.standard.setLoginState(true)
-            print(UserDefaults.standard.getLoginState()!)
+            
         } catch {
             print(error.localizedDescription)
         }

@@ -12,20 +12,27 @@ import Foundation
 struct MainFeature {
     @ObservableState
     struct State {
-        var loginState: Bool = false
+        @Presents var setting: SettingFeature.State?
     }
     
     enum Action {
-        case getLoginState
+        case setting(PresentationAction<SettingFeature.Action>)
+        case settingButtonTapped
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case .getLoginState:
-                state.loginState = UserDefaults.standard.getLoginState()!
+            case .settingButtonTapped:
+                state.setting = SettingFeature.State()
                 return .none
+                
+            case .setting(_):
+                return.none
             }
+        }
+        .ifLet(\.$setting, action: \.setting) {
+            SettingFeature()
         }
     }
 }

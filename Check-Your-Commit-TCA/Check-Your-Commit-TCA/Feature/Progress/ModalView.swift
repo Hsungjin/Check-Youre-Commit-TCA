@@ -9,27 +9,34 @@ import SwiftUI
 
 struct ModalView: View {
     @Binding var commitDay: Int
+    @Binding var progress: Int
+    @Binding var showSheet: Bool
+    
+    @State var goalDay = 0
     
     var body: some View {
         VStack {
-//            Picker("Your D-day", selection: $progressModel.goal) {
-//                ForEach(1...365, id: \.self) { number in
-//                    Text("\(number)")
-//                }
-//            }
-//            .pickerStyle(.wheel)
-//            Button {
-//                progressModel.showSheet = false
-//                moveDinosaur()
-//                progressModel.updateGoal(newGoal: progressModel.goal)
-//            } label: {
-//                Text("저장")
-//                    .font(.pretendardBold_17)
-//                    .foregroundStyle(Color.baseColor)
-//            }
+            Picker("Your D-day", selection: $goalDay) {
+                ForEach(1...365, id: \.self) { number in
+                    Text("\(number)")
+                }
+            }
+            .pickerStyle(.wheel)
+            Button {
+                showSheet = false
+                moveDinosaur()
+                UserDefaults.standard.setUserGoal(goalDay)
+            } label: {
+                Text("저장")
+                    .font(.pretendardBold_17)
+                    .foregroundStyle(Color.baseColor)
+            }
         }
         .presentationDetents([ .medium, .large])
         .presentationBackground(.thinMaterial)
+        .onAppear {
+            goalDay = UserDefaults.standard.getUserGoal()
+        }
     }
     
     // Animation에 대한 함수는 뷰에서만 정의 가능
@@ -37,9 +44,9 @@ struct ModalView: View {
         Task {
             for i in 0...commitDay {
                 try await Task.sleep(until: .now.advanced(by: .milliseconds(40)), clock: .continuous)
-//                withAnimation {
-//                    progressModel.progress = i
-//                }
+                withAnimation {
+                    progress = i
+                }
             }
         }
     }

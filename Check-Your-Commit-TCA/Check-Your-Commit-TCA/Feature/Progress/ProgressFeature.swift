@@ -13,11 +13,16 @@ struct ProgressFeature {
     @ObservableState
     struct State {
         var commitDay: Int = 0
+        var userGoal: Int = 0
+        var progressDay: Int = 0
     }
     
     enum Action {
         case getCommitDay
         case getCommitResponse(Int)
+        
+        case getUserGoal(Int)
+        case getProgressDay(Int)
     }
     
     var body: some ReducerOf<Self> {
@@ -31,6 +36,14 @@ struct ProgressFeature {
                 
             case let .getCommitResponse(input):
                 state.commitDay = input
+                return .none
+                
+            case .getUserGoal:
+                state.userGoal = UserDefaults.standard.getUserGoal()
+                return .none
+                
+            case .getProgressDay:
+                state.progressDay = state.userGoal
                 return .none
             }
         }

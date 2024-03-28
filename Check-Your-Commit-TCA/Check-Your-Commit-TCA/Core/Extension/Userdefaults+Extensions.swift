@@ -54,3 +54,15 @@ extension UserDefaults {
         return string(forKey: UserDefaults.userNickname)
     }
 }
+
+extension UserDefaults {
+    private static let userGoal = "userGoal"
+    
+    func setUserGoal(_ day: Int) {
+        set(day, forKey: UserDefaults.userGoal)
+    }
+    
+    func getUserGoal() -> Int {
+        return integer(forKey: UserDefaults.userGoal)
+    }
+}

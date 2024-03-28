@@ -79,9 +79,8 @@ class LoginManager {
     func getCommitData() async -> Int {
         var commitDay: Int = 0
         
-        guard let userLogin = UserDefaults.standard.getUserLogin(),
-              let url = URL(string: "https://github.com/users/\(userLogin)/contributions") else {
-            print("Invalid URL or user login not found")
+        guard let url = URL(string: "http://github.com/users/\(UserDefaults.standard.getUserLogin()!)/contributions") else {
+            print("Invalid URL")
             return 0
         }
         
@@ -102,7 +101,6 @@ class LoginManager {
                     return (dateString, levelString)
                 }
                 
-                //                print(validCommits)
                 if dataToDictionary(validCommits) {
                     commitDay = findConsecutiveDates(withData: testCase)
                 }
@@ -110,7 +108,6 @@ class LoginManager {
         } catch {
             print("Error fetching or parsing data: \(error)")
         }
-        
         return commitDay
     }
     
@@ -161,12 +158,12 @@ class LoginManager {
         
         // currentDateFormatted(연속된 날짜를 저장한 배열)의 마지막값은 최근 커밋날짜가 되므로 조건문 실행으로 연속 커밋날짜 판독
         if currentConsecutive.last == currentDateFormatted() {
-            print(currentConsecutive)
             return Int(currentConsecutive.count) + 1
         } else {
             return 0
         }
     }
+    
     // 오늘의 날자를 String 타입으로 가져와줌
     func currentDateFormatted() -> String {
         let dateFormatter = DateFormatter()

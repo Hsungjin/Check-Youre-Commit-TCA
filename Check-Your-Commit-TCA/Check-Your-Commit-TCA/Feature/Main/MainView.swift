@@ -58,6 +58,10 @@ struct MainView: View {
                             Text("Hi, \(UserDefaults.standard.getUserName() ?? "CYC")")
                             
                             Text("오늘 커밋 잡쉈어?")
+                            
+                            HStack {
+                                Spacer()
+                            }
                         }
                         .font(.pretendardBold_25)
                         .padding(.leading, 25)

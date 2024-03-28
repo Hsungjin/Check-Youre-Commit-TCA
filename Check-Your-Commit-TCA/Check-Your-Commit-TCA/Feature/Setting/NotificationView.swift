@@ -49,23 +49,23 @@ struct NotificationView: View {
         
         let notiTime = Array<Int>(19...23)
         let notiMessage: [String] = ["성공하면 커밋 실패하면 반역", "치우랑 사귈래 커밋할래", "커밋만 치고 푸시 안하신건 아니죠?", "커밋해줘여..🫶", "너도 할 수 있어 '커밋'", "결혼에 대하여 예쁜 커밋을 골라~", "커밋은 돌아오는거야!", "나랑 사귈래 커밋할래", "아는 형님의 ~ 아는 누나의 커밋이요!", "너는 별을 보자며 내 커밋 치고서", "커밋이 매깨고", "커밋 묻고 떠블로가", "커밋 푸쉬빼고 모조리 다 씹어먹어줄게..", "연진아, 내 커밋은 너야", "커밋, I am 신뢰에요", "중요한건 꺾여도 그냥 하는 커밋", "너의 커밋을 누르고 설레임에 푸쉬 누르다..", "하염없이 기다리는 중..", "오늘안에 커밋 하시는거죠?", "커밋하고 성공시대 시작됐다! C Y C!", "언제 커밋하시려고요?", "야이 개땍기야 레포로 따라와", "아ㅋㅋ 그거 그렇게 커밋치는거 아닌데ㅋㅋ"]
-//        
-//        if isOnNotification {
-//            print("on")
-//            LocalNotificationHelper.shared.printPendingNotification()
-//            for i in notiTime {
-//                LocalNotificationHelper
-//                    .shared
-//                    .pushScheduledNotification(title: "Check Your Commit",
-//                                               body: notiMessage.randomElement()!,
-//                                               hour: i,
-//                                               identifier: "SCHEDULED_NOTI\(i)")
-//            }
-//        } else {
-//            print("off")
-//            LocalNotificationHelper.shared.printPendingNotification()
-//            LocalNotificationHelper.shared.removeAllNotifications()
-//            LocalNotificationHelper.shared.printPendingNotification()
-//        }
+        
+        if isOnNotification {
+            print("on")
+            LocalNotificationHelper.shared.printPendingNotification()
+            for i in notiTime {
+                LocalNotificationHelper
+                    .shared
+                    .pushScheduledNotification(title: "Check Your Commit",
+                                               body: notiMessage.randomElement()!,
+                                               hour: i,
+                                               identifier: "SCHEDULED_NOTI\(i)")
+            }
+        } else {
+            print("off")
+            LocalNotificationHelper.shared.printPendingNotification()
+            LocalNotificationHelper.shared.removeAllNotifications()
+            LocalNotificationHelper.shared.printPendingNotification()
+        }
     }
 }

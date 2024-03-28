@@ -10,9 +10,7 @@ import SwiftUI
 
 struct ProgressView: View {
     @Bindable var store: StoreOf<ProgressFeature>
-    
-    @State var showSheet = false
-    
+        
     var body: some View {
         VStack(alignment: .leading) {
             ProgressTextView(commitDay: $store.commitDay.sending(\.getCommitResponse))
@@ -29,16 +27,16 @@ struct ProgressView: View {
                 //                 pink dinosaur button view
                 ZStack(alignment: .top) {
                     Button {
-                        showSheet.toggle()
+                        store.send(.toggleShowSheet(true))
                     } label: {
                         DdayButtonView(goal: $store.userGoal.sending(\.getUserGoal))
                     }
                     .tint(.clear)
                     .buttonStyle(.borderedProminent)
-                    .sheet(isPresented: $showSheet) {
+                    .sheet(isPresented: $store.showSheet.sending(\.toggleShowSheet)) {
                         ModalView(commitDay: $store.commitDay.sending(\.getCommitResponse),
                                   progress: $store.progressDay.sending(\.getProgressDay),
-                                  showSheet: $showSheet)
+                                  showSheet: $store.showSheet.sending(\.toggleShowSheet))
                     }
                     .onDisappear {
                         store.send(.getCommitDay)

@@ -15,6 +15,7 @@ struct ProgressFeature {
         var commitDay: Int = 0
         var userGoal: Int = 0
         var progressDay: Int = 0
+        var showSheet: Bool = false
     }
     
     enum Action {
@@ -23,6 +24,8 @@ struct ProgressFeature {
         
         case getUserGoal(Int)
         case getProgressDay(Int)
+        
+        case toggleShowSheet(Bool)
     }
     
     var body: some ReducerOf<Self> {
@@ -44,6 +47,10 @@ struct ProgressFeature {
                 
             case .getProgressDay:
                 state.progressDay = state.userGoal
+                return .none
+                
+            case let .toggleShowSheet(input):
+                state.showSheet = input
                 return .none
             }
         }

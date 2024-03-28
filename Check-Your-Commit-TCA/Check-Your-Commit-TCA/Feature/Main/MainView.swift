@@ -74,7 +74,6 @@ struct MainView: View {
                             .padding(.top, -15)
                         
                         // MARK: - 알림장 미리보기
-                        //                        TodoView(store: store.scope(state: \.todo, action: \.todo))
                         TodoPreView()
                             .onTapGesture {
                                 store.send(.todoButtonTapped)
@@ -85,12 +84,12 @@ struct MainView: View {
                 //                DLMode(appearanceMode: $appearanceMode, show: $show)
                 //                    .ignoresSafeArea()
             }
-            .navigationDestination(
+            .navigationDestination (
                 item: $store.scope(state: \.setting, action: \.setting)
             ) { settingStore in
                 SettingView(store: settingStore)
             }
-            .navigationDestination(
+            .navigationDestination (
                 item: $store.scope(state: \.todo, action: \.todo)
             ) { todoStore in
                 TodoView(store: todoStore)

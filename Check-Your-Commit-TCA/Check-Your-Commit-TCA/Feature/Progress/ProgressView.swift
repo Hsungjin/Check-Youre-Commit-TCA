@@ -16,8 +16,7 @@ struct ProgressView: View {
             ProgressTextView(commitDay: $store.commitDay.sending(\.getCommitResponse))
             
             HStack(alignment: .center) {
-                ProgressBarView(progress: $store.progressDay.sending(\.getProgressDay),
-                                goal: $store.userGoal.sending(\.getUserGoal))
+                ProgressBarView()
 //                .onAppear {
 //                    ModalView(commitDay: $store.commitDay.sending(\.getCommitResponse),
 //                              goalDay: $store.userGoal.sending(\.getUserGoal),
@@ -27,25 +26,27 @@ struct ProgressView: View {
                 //                 pink dinosaur button view
                 ZStack(alignment: .top) {
                     Button {
-                        store.send(.toggleShowSheet(true))
+                        store.send(.showModal)
                     } label: {
-                        DdayButtonView(goal: $store.userGoal.sending(\.getUserGoal))
+                        VStack {
+                            Text("D-\(store.userGoal)")
+                                .font(.pretendardSemiBold_12)
+                                .foregroundStyle(Color.baseColor)
+
+                            Image(.kissPink)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40)
+                        }
                     }
                     .tint(.clear)
                     .buttonStyle(.borderedProminent)
-                    .sheet(isPresented: $store.showSheet.sending(\.toggleShowSheet)) {
-                        ModalView(store: Store(initialState: ModalFeature.State(
-                            commitDay: store.commitDay,
-                            userGoal: store.userGoal,
-                            progressDay: store.progressDay, 
-                            showSheet: store.showSheet)) {
-                            ModalFeature()
-                        })
-                    }
-                    .onDisappear {
-                        store.send(.getCommitDay)
-                        store.send(.getUserGoal(0))
-                        store.send(.getProgressDay(0))
+                    .sheet(item: $store.scope(state: \.modal, action: \.modal)
+                    ) { modalStore in
+                        ModalView(store: modalStore)
+                            .onDisappear {
+                                store.send(.getCommitDay)
+                            }
                     }
                 }
                 .padding(.top, -15)
@@ -56,8 +57,6 @@ struct ProgressView: View {
         .background(Color.bgColor)
         .onAppear {
             store.send(.getCommitDay)
-            store.send(.getUserGoal(0))
-            store.send(.getProgressDay(0))
         }
     }
 }

@@ -17,7 +17,6 @@ struct ProgressFeature {
         var commitDay: Int = 0
         var userGoal: Int = 0
         var progressDay: Int = 0
-        var showSheet: Bool = false
     }
     
     enum Action {
@@ -26,10 +25,10 @@ struct ProgressFeature {
         case getCommitDay
         case getCommitResponse(Int)
         
-        case getUserGoal(Int)
-        case getProgressDay(Int)
+        case getUserGoal
+        case getProgressDay
         
-        case toggleShowSheet(Bool)
+        case showModal
     }
     
     var body: some ReducerOf<Self> {
@@ -39,6 +38,8 @@ struct ProgressFeature {
                 return .run { send in
                     let commitDay = await LoginManager.shared.getCommitData()
                     await send(.getCommitResponse(commitDay))
+                    await send(.getUserGoal)
+                    await send(.getProgressDay)
                 }
                 
             case let .getCommitResponse(input):
@@ -53,8 +54,11 @@ struct ProgressFeature {
                 state.progressDay = state.userGoal
                 return .none
                 
-            case let .toggleShowSheet(input):
-                state.showSheet = input
+            case .showModal:
+                state.modal = ModalFeature.State (
+                    commitDay: state.commitDay,
+                    userGoal: state.userGoal,
+                    progressDay: state.progressDay)
                 return .none
                 
             case .modal:

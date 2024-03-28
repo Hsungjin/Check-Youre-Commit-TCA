@@ -10,14 +10,14 @@ import SwiftUI
 struct ProgressBarView: View {
     //    @AppStorage("colorkey") var selectedColor: Color = .green
     
-    @Binding var progress: Int
-    @Binding var goal: Int
-    
-    var maxProgressWidth: Double {
-        let containerWidth = UIScreen.main.bounds.width - 95
-        let progressWidth = CGFloat(Double(progress) / Double(goal)) * containerWidth
-        return min(progressWidth, containerWidth)
-    }
+//    @Binding var progress: Int
+//    @Binding var goal: Int
+//    
+//    var maxProgressWidth: Double {
+//        let containerWidth = UIScreen.main.bounds.width - 95
+//        let progressWidth = CGFloat(Double(progress) / Double(goal)) * containerWidth
+//        return min(progressWidth, containerWidth)
+//    }
     
     var body: some View {
         ZStack(alignment: .leading) {
@@ -42,7 +42,7 @@ struct ProgressBarView: View {
                     ,alignment: .trailing
                 )
             // min 값을 줘야 0 ~ commitday까지 그래프 애니메이션 표시 가능
-                .frame(width: maxProgressWidth)
+                .frame(width: 300)
                 .fixedSize()
         }
         .offset(x: 20, y: 6)

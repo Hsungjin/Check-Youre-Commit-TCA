@@ -19,9 +19,9 @@ struct ModalView: View {
             }
             .pickerStyle(.wheel)
             Button {
-                store.send(.toggleShowSheet)
-                moveDinosaur()
                 UserDefaults.standard.setUserGoal(store.userGoal)
+                store.send(.closeSheet)
+//                moveDinosaur()
             } label: {
                 Text("저장")
                     .font(.pretendardBold_17)
@@ -33,14 +33,14 @@ struct ModalView: View {
     }
     
     // Animation에 대한 함수는 뷰에서만 정의 가능
-    func moveDinosaur() {
-        Task {
-            for i in 0...store.commitDay {
-                try await Task.sleep(until: .now.advanced(by: .milliseconds(40)), clock: .continuous)
+//    func moveDinosaur() {
+//        Task {
+//            for i in 0...store.commitDay {
+//                try await Task.sleep(until: .now.advanced(by: .milliseconds(40)), clock: .continuous)
 //                withAnimation {
-//                    progress = i
+//                    store.send(.changeProgressDay(i))
 //                }
-            }
-        }
-    }
+//            }
+//        }
+//    }
 }

@@ -15,30 +15,24 @@ struct ModalFeature {
         var commitDay: Int
         var userGoal: Int
         var progressDay: Int
-        var showSheet: Bool
     }
     
     enum Action {
-        case moveDinosour
-        
         case setUserGoal(Int)
-        
-        case toggleShowSheet
+        case closeSheet
     }
+    
+    @Dependency(\.dismiss) var dismiss
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case .moveDinosour:
-                return .none
-                
             case let .setUserGoal(input):
                 state.userGoal = input
                 return .none
                 
-            case .toggleShowSheet:
-                state.showSheet = false
-                return .none
+            case .closeSheet:
+                return .run { _ in await self.dismiss() }
             }
         }
     }

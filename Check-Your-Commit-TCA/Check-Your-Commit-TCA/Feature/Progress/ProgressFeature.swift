@@ -12,6 +12,8 @@ import Foundation
 struct ProgressFeature {
     @ObservableState
     struct State {
+        @Presents var modal: ModalFeature.State?
+        
         var commitDay: Int = 0
         var userGoal: Int = 0
         var progressDay: Int = 0
@@ -19,6 +21,8 @@ struct ProgressFeature {
     }
     
     enum Action {
+        case modal(PresentationAction<ModalFeature.Action>)
+        
         case getCommitDay
         case getCommitResponse(Int)
         
@@ -52,7 +56,13 @@ struct ProgressFeature {
             case let .toggleShowSheet(input):
                 state.showSheet = input
                 return .none
+                
+            case .modal:
+                return .none
             }
+        }
+        .ifLet(\.$modal, action: \.modal) {
+            ModalFeature()
         }
     }
 }

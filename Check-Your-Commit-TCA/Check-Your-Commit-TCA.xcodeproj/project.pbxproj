@@ -34,6 +34,7 @@
 		64A47B902BB46226000E6D77 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B8F2BB46226000E6D77 /* ModalView.swift */; };
 		64A47B962BB55B08000E6D77 /* TodoPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B952BB55B08000E6D77 /* TodoPreView.swift */; };
 		64A47B982BB5D197000E6D77 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B972BB5D197000E6D77 /* NotificationHelper.swift */; };
+		64A47B9A2BB5D3BC000E6D77 /* ModalFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B992BB5D3BC000E6D77 /* ModalFeature.swift */; };
 		64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945C72BB162AD00734159 /* Font+Extensions.swift */; };
 		64E945D32BB1631A00734159 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */; };
 		64E945D42BB1631A00734159 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */; };
@@ -110,6 +111,7 @@
 		64A47B8F2BB46226000E6D77 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		64A47B952BB55B08000E6D77 /* TodoPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPreView.swift; sourceTree = "<group>"; };
 		64A47B972BB5D197000E6D77 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		64A47B992BB5D3BC000E6D77 /* ModalFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFeature.swift; sourceTree = "<group>"; };
 		64E945C72BB162AD00734159 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				64A47B8B2BB46212000E6D77 /* DdayButtonView.swift */,
 				64A47B8D2BB4621E000E6D77 /* ProgressTextView.swift */,
 				64A47B8F2BB46226000E6D77 /* ModalView.swift */,
+				64A47B992BB5D3BC000E6D77 /* ModalFeature.swift */,
 			);
 			path = Progress;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				64E946002BB16B6200734159 /* ProgressView.swift in Sources */,
 				64A47B802BB3486C000E6D77 /* LicenseView.swift in Sources */,
 				64A47B8C2BB46212000E6D77 /* DdayButtonView.swift in Sources */,
+				64A47B9A2BB5D3BC000E6D77 /* ModalFeature.swift in Sources */,
 				64A47B822BB3487B000E6D77 /* NotificationView.swift in Sources */,
 				64A47B8A2BB46207000E6D77 /* PrograssBarView.swift in Sources */,
 				64E946022BB16B6800734159 /* TodoView.swift in Sources */,

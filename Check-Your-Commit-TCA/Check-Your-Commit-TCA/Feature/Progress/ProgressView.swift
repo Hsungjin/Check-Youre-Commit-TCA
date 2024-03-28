@@ -34,9 +34,13 @@ struct ProgressView: View {
                     .tint(.clear)
                     .buttonStyle(.borderedProminent)
                     .sheet(isPresented: $store.showSheet.sending(\.toggleShowSheet)) {
-                        ModalView(commitDay: $store.commitDay.sending(\.getCommitResponse),
-                                  progress: $store.progressDay.sending(\.getProgressDay),
-                                  showSheet: $store.showSheet.sending(\.toggleShowSheet))
+                        ModalView(store: Store(initialState: ModalFeature.State(
+                            commitDay: store.commitDay,
+                            userGoal: store.userGoal,
+                            progressDay: store.progressDay, 
+                            showSheet: store.showSheet)) {
+                            ModalFeature()
+                        })
                     }
                     .onDisappear {
                         store.send(.getCommitDay)

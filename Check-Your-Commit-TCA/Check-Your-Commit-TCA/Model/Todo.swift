@@ -8,13 +8,17 @@
 import RealmSwift
 import SwiftUI
 
-struct TodoModel: Identifiable {
-    var id = UUID()
-    var title: String
-    var createdAt = Date()
-    var completed = false
-
-    init(title: String = "") {
+class TodoModel: Object, Identifiable {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var title: String = ""
+    @Persisted var createAt: Date = Date()
+    @Persisted var completed: Bool = false
+    
+    convenience init(id: ObjectId, title: String, createAt: Date, completed: Bool) {
+        self.init()
+        self.id = id
         self.title = title
+        self.createAt = createAt
+        self.completed = completed
     }
 }

@@ -32,6 +32,7 @@
 		64A47B8C2BB46212000E6D77 /* DdayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B8B2BB46212000E6D77 /* DdayButtonView.swift */; };
 		64A47B8E2BB4621E000E6D77 /* ProgressTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B8D2BB4621E000E6D77 /* ProgressTextView.swift */; };
 		64A47B902BB46226000E6D77 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B8F2BB46226000E6D77 /* ModalView.swift */; };
+		64A47B962BB55B08000E6D77 /* TodoPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B952BB55B08000E6D77 /* TodoPreView.swift */; };
 		64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945C72BB162AD00734159 /* Font+Extensions.swift */; };
 		64E945D32BB1631A00734159 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */; };
 		64E945D42BB1631A00734159 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */; };
@@ -53,11 +54,11 @@
 		64E945F62BB16ADA00734159 /* MainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945F52BB16ADA00734159 /* MainFeature.swift */; };
 		64E945F82BB16AE900734159 /* ProgressFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945F72BB16AE900734159 /* ProgressFeature.swift */; };
 		64E945FA2BB16AEF00734159 /* TodoFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945F92BB16AEF00734159 /* TodoFeature.swift */; };
-		64E945FC2BB16AF900734159 /* GrassFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945FB2BB16AF900734159 /* GrassFeature.swift */; };
+		64E945FC2BB16AF900734159 /* CommitFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945FB2BB16AF900734159 /* CommitFeature.swift */; };
 		64E945FE2BB16B1700734159 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945FD2BB16B1700734159 /* RealmManager.swift */; };
 		64E946002BB16B6200734159 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945FF2BB16B6200734159 /* ProgressView.swift */; };
 		64E946022BB16B6800734159 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E946012BB16B6800734159 /* TodoView.swift */; };
-		64E946042BB16B6E00734159 /* GrassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E946032BB16B6E00734159 /* GrassView.swift */; };
+		64E946042BB16B6E00734159 /* CommitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E946032BB16B6E00734159 /* CommitView.swift */; };
 		64E946062BB16ED300734159 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E946052BB16ED300734159 /* Todo.swift */; };
 		64E9460D2BB1725D00734159 /* Userdefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E9460C2BB1725D00734159 /* Userdefaults+Extensions.swift */; };
 		64E946102BB1759B00734159 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E9460F2BB1759B00734159 /* LoginManager.swift */; };
@@ -106,6 +107,7 @@
 		64A47B8B2BB46212000E6D77 /* DdayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayButtonView.swift; sourceTree = "<group>"; };
 		64A47B8D2BB4621E000E6D77 /* ProgressTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTextView.swift; sourceTree = "<group>"; };
 		64A47B8F2BB46226000E6D77 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		64A47B952BB55B08000E6D77 /* TodoPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPreView.swift; sourceTree = "<group>"; };
 		64E945C72BB162AD00734159 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -125,11 +127,11 @@
 		64E945F52BB16ADA00734159 /* MainFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeature.swift; sourceTree = "<group>"; };
 		64E945F72BB16AE900734159 /* ProgressFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressFeature.swift; sourceTree = "<group>"; };
 		64E945F92BB16AEF00734159 /* TodoFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFeature.swift; sourceTree = "<group>"; };
-		64E945FB2BB16AF900734159 /* GrassFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassFeature.swift; sourceTree = "<group>"; };
+		64E945FB2BB16AF900734159 /* CommitFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitFeature.swift; sourceTree = "<group>"; };
 		64E945FD2BB16B1700734159 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		64E945FF2BB16B6200734159 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		64E946012BB16B6800734159 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
-		64E946032BB16B6E00734159 /* GrassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassView.swift; sourceTree = "<group>"; };
+		64E946032BB16B6E00734159 /* CommitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitView.swift; sourceTree = "<group>"; };
 		64E946052BB16ED300734159 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		64E9460C2BB1725D00734159 /* Userdefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Userdefaults+Extensions.swift"; sourceTree = "<group>"; };
 		64E9460F2BB1759B00734159 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
@@ -310,8 +312,8 @@
 		64E945C22BB1625900734159 /* Grass */ = {
 			isa = PBXGroup;
 			children = (
-				64E946032BB16B6E00734159 /* GrassView.swift */,
-				64E945FB2BB16AF900734159 /* GrassFeature.swift */,
+				64E946032BB16B6E00734159 /* CommitView.swift */,
+				64E945FB2BB16AF900734159 /* CommitFeature.swift */,
 			);
 			path = Grass;
 			sourceTree = "<group>";
@@ -321,6 +323,7 @@
 			children = (
 				64E946012BB16B6800734159 /* TodoView.swift */,
 				64E945F92BB16AEF00734159 /* TodoFeature.swift */,
+				64A47B952BB55B08000E6D77 /* TodoPreView.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -560,9 +563,9 @@
 				64A47B7D2BB347A4000E6D77 /* Setting.swift in Sources */,
 				64E945F62BB16ADA00734159 /* MainFeature.swift in Sources */,
 				64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */,
-				64E946042BB16B6E00734159 /* GrassView.swift in Sources */,
+				64E946042BB16B6E00734159 /* CommitView.swift in Sources */,
 				64A47B762BB34157000E6D77 /* EnterView.swift in Sources */,
-				64E945FC2BB16AF900734159 /* GrassFeature.swift in Sources */,
+				64E945FC2BB16AF900734159 /* CommitFeature.swift in Sources */,
 				64E946132BB1796500734159 /* key.swift in Sources */,
 				64E945E72BB1658400734159 /* Color+Extensions.swift in Sources */,
 				64A47B882BB3F53E000E6D77 /* BackButtonView.swift in Sources */,
@@ -580,6 +583,7 @@
 				64E946022BB16B6800734159 /* TodoView.swift in Sources */,
 				64E945E02BB163F800734159 /* LoginView.swift in Sources */,
 				64E946102BB1759B00734159 /* LoginManager.swift in Sources */,
+				64A47B962BB55B08000E6D77 /* TodoPreView.swift in Sources */,
 				64E946062BB16ED300734159 /* Todo.swift in Sources */,
 				6480D5982BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift in Sources */,
 			);

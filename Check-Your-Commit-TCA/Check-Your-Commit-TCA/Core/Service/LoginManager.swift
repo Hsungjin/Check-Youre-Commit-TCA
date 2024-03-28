@@ -13,9 +13,6 @@ class LoginManager {
     
     static let shared = LoginManager()
     
-    private let scope: String = "repo gist user"
-    private let githubURL: String = "https://github.com"
-    private let githubApiURL: String = "https://api.github.com"
     private var code = ""
     var testCase: [String: Int] = [:]
     
@@ -101,7 +98,7 @@ class LoginManager {
                     return (dateString, levelString)
                 }
                 
-                if dataToDictionary(validCommits) {
+                if await dataToDictionary(validCommits) {
                     commitDay = findConsecutiveDates(withData: testCase)
                 }
             }
@@ -111,6 +108,7 @@ class LoginManager {
         return commitDay
     }
     
+    @MainActor
     func dataToDictionary(_ data: [(String, String)]) -> Bool {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -153,7 +151,7 @@ class LoginManager {
             }
         }
         // 가장 최신 날짜 - 디버깅용
-        print(currentConsecutive)
+//        print(currentConsecutive)
 //        print(currentDateFormatted())
         
         // currentDateFormatted(연속된 날짜를 저장한 배열)의 마지막값은 최근 커밋날짜가 되므로 조건문 실행으로 연속 커밋날짜 판독

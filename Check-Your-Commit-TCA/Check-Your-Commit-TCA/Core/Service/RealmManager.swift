@@ -8,23 +8,6 @@
 import Foundation
 import RealmSwift
 
-class Dog: Object {
-    @Persisted var name = ""
-    @Persisted var age = 0
-    @Persisted var color = ""
-    @Persisted var currentCity = ""
-    @Persisted var citiesVisited: MutableSet<String>
-    @Persisted var companion: AnyRealmValue
-    // To-one relationship
-    @Persisted var favoriteToy: DogToy?
-    // Map of city name -> favorite park in that city
-    @Persisted var favoriteParksByCity: Map<String, String>
-}
-
-class DogToy: Object {
-    @Persisted var name = ""
-}
-
 class RealmManager {
     static let shared = RealmManager()
     
@@ -32,28 +15,43 @@ class RealmManager {
     
     private init() { }
     
-//    func updateLoginState(code: String) {
-//        let user = User()
-//        user.code = code
-//        
-//        do {
-//            try realm.write {
-//                realm.add(user)
-//            }
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
+    func getSortedTodoList() -> [TodoModel] {
+        let todo = realm.objects(TodoModel.self)
+        let uncompletedTodos = todo.filter("completed == false").sorted(byKeyPath: "createAt", ascending: false)
+        let completedTodos = todo.filter("completed == true").sorted(byKeyPath: "createAt", ascending: false)
+        return Array(uncompletedTodos) + Array(completedTodos)
+    }
     
-    func testfunc() {
-        // (1) Create a Dog object from a dictionary
-        let myDog = Dog(value: ["name": "Pluto", "age": 3])
-        // (2) Create a Dog object from an array
-        let myOtherDog = Dog(value: ["Fido", 5])
-        let realm = try! Realm()
-        // Add to the realm inside a transaction
-        try! realm.write {
-            realm.add([myDog, myOtherDog])
+    func writeTodoList(_ title: String) {
+        let todo = TodoModel()
+        todo.title = title
+        
+        do {
+            try realm.write {
+                realm.add(todo)
+            }
+        } catch {
+            print("Error Create todo item: \(error.localizedDescription)")
+        }
+    }
+    
+    func deleteTodoList(_ todo: TodoModel) {
+        do {
+            try realm.write {
+                realm.delete(todo)
+            }
+        } catch {
+            print("Error deleting todo item: \(error.localizedDescription)")
+        }
+    }
+    
+    func toggleCompleted(_ todoItem: TodoModel) {
+        do {
+            try realm.write {
+                todoItem.completed.toggle()
+            }
+        } catch {
+            print("Error toggling completion status: \(error.localizedDescription)")
         }
     }
 }

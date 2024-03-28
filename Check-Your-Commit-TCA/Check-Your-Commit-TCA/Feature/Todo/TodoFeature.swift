@@ -10,17 +10,35 @@ import Foundation
 
 @Reducer
 struct TodoFeature {
-    struct State {
-        
+    @ObservableState
+    struct State: Equatable {
+        var sortedTodoModel: [TodoModel] = []
+        var textField: String = ""
+        var isTextFieldShowing: Bool = false
     }
     
     enum Action {
-        
+        case getTodoList
+        case textFieldChange(String)
+        case testFieldShowing(Bool)
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
-            return.none
+            switch action {
+                
+            case .getTodoList:
+                state.sortedTodoModel = RealmManager.shared.getSortedTodoList()
+                return .none
+                
+            case let .textFieldChange(input):
+                state.textField = input
+                return .none
+                
+            case let .testFieldShowing(input):
+                state.isTextFieldShowing = input
+                return .none
+            }
         }
     }
 }

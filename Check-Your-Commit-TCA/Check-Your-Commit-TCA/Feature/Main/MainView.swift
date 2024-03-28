@@ -24,21 +24,21 @@ struct MainView: View {
                             .frame(width: 55)
                         
                         Spacer()
-//                        
-//                        // DL Mode
-//                        Button {
-//                            withAnimation {
-//                                show.toggle()
-//                            }
-//                        } label: {
-//                            Image(systemName: "lamp.table.fill")
-//                                .resizable()
-//                                .scaledToFit()
-//                                .frame(width: 25, height: 25)
-//                                .foregroundStyle(.gray)
-//                                .padding(.horizontal, 5)
-//                        }
-//
+                        //
+                        //                        // DL Mode
+                        //                        Button {
+                        //                            withAnimation {
+                        //                                show.toggle()
+                        //                            }
+                        //                        } label: {
+                        //                            Image(systemName: "lamp.table.fill")
+                        //                                .resizable()
+                        //                                .scaledToFit()
+                        //                                .frame(width: 25, height: 25)
+                        //                                .foregroundStyle(.gray)
+                        //                                .padding(.horizontal, 5)
+                        //                        }
+                        //
                         Button {
                             store.send(.settingButtonTapped)
                         } label: {
@@ -70,27 +70,34 @@ struct MainView: View {
                         ProgressView(store: store.scope(state: \.progress, action: \.progress))
                         
                         // MARK: - 잔디 뷰 연결
-//                        CommitView()
+                        CommitView()
                             .padding(.top, -15)
                         
                         // MARK: - 알림장 미리보기
-//                        TodoPreView()
-                        
-                        
+                        //                        TodoView(store: store.scope(state: \.todo, action: \.todo))
+                        TodoPreView()
+                            .onTapGesture {
+                                store.send(.todoButtonTapped)
+                            }
                     }
                     .scrollIndicators(.hidden)
                 }
-//                DLMode(appearanceMode: $appearanceMode, show: $show)
-//                    .ignoresSafeArea()
+                //                DLMode(appearanceMode: $appearanceMode, show: $show)
+                //                    .ignoresSafeArea()
             }
             .navigationDestination(
                 item: $store.scope(state: \.setting, action: \.setting)
             ) { settingStore in
                 SettingView(store: settingStore)
             }
+            .navigationDestination(
+                item: $store.scope(state: \.todo, action: \.todo)
+            ) { todoStore in
+                TodoView(store: todoStore)
+            }
         }
-//        .onAppear() {
-//            loginModel.getCommitData()
-//        }
+        //        .onAppear() {
+        //            loginModel.getCommitData()
+        //        }
     }
 }

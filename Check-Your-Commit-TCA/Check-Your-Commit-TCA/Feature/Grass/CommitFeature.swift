@@ -9,7 +9,7 @@ import ComposableArchitecture
 import Foundation
 
 @Reducer
-struct GrassFeature {
+struct CommitFeature {
     struct State {
         
     }

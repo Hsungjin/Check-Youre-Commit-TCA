@@ -36,11 +36,10 @@ struct TodoPreView: View {
                     .padding(.top, 5)
                 
                 // MARK: - Todo 미리보기 바디
-                
                 Spacer()
-                    .frame(height: RealmManager.shared.getSortedTodoList().count == 0 ? 140 : 0)
+                    .frame(height: RealmManager.shared.getSortedTodoList(type: .preview).count == 0 ? 140 : 0)
                 
-                ForEach(RealmManager.shared.getSortedTodoList().prefix(3)) { list in
+                ForEach(RealmManager.shared.getSortedTodoList(type: .preview).prefix(3)) { list in
                     HStack {
                         Button {
                             RealmManager.shared.toggleCompleted(list)
@@ -63,7 +62,7 @@ struct TodoPreView: View {
                 .frame(width: 350)
                 .offset(y: -20)
                 Spacer()
-                    .frame(height: RealmManager.shared.getSortedTodoList().count == 1 ? 110 : (RealmManager.shared.getSortedTodoList().count == 2 ? 60 : 10))
+                    .frame(height: RealmManager.shared.getSortedTodoList(type: .preview).count == 1 ? 110 : (RealmManager.shared.getSortedTodoList(type: .preview).count == 2 ? 60 : 10))
             }
         }
     }

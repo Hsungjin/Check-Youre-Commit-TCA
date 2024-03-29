@@ -34,6 +34,7 @@
 		64A47B962BB55B08000E6D77 /* TodoPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B952BB55B08000E6D77 /* TodoPreView.swift */; };
 		64A47B982BB5D197000E6D77 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B972BB5D197000E6D77 /* NotificationHelper.swift */; };
 		64A47B9A2BB5D3BC000E6D77 /* ModalFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B992BB5D3BC000E6D77 /* ModalFeature.swift */; };
+		64A47B9D2BB733FA000E6D77 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A47B9C2BB733FA000E6D77 /* Enums.swift */; };
 		64E945C82BB162AD00734159 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E945C72BB162AD00734159 /* Font+Extensions.swift */; };
 		64E945D32BB1631A00734159 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */; };
 		64E945D42BB1631A00734159 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */; };
@@ -110,6 +111,7 @@
 		64A47B952BB55B08000E6D77 /* TodoPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPreView.swift; sourceTree = "<group>"; };
 		64A47B972BB5D197000E6D77 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		64A47B992BB5D3BC000E6D77 /* ModalFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalFeature.swift; sourceTree = "<group>"; };
+		64A47B9C2BB733FA000E6D77 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		64E945C72BB162AD00734159 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		64E945CA2BB1631900734159 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		64E945CB2BB1631900734159 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		6480D5CF2BB15966004C47D3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				64A47B9B2BB733F1000E6D77 /* Enums */,
 				64E945E32BB1644900734159 /* Component */,
 				6480D5D22BB15974004C47D3 /* Extension */,
 				6480D5D32BB15979004C47D3 /* Service */,
@@ -302,6 +305,14 @@
 				64A47B832BB348BD000E6D77 /* AboutView.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		64A47B9B2BB733F1000E6D77 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				64A47B9C2BB733FA000E6D77 /* Enums.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		64E945C12BB1625400734159 /* Login */ = {
@@ -588,6 +599,7 @@
 				64E945E02BB163F800734159 /* LoginView.swift in Sources */,
 				64E946102BB1759B00734159 /* LoginManager.swift in Sources */,
 				64A47B962BB55B08000E6D77 /* TodoPreView.swift in Sources */,
+				64A47B9D2BB733FA000E6D77 /* Enums.swift in Sources */,
 				64E946062BB16ED300734159 /* Todo.swift in Sources */,
 				6480D5982BB152E3004C47D3 /* Check_Your_Commit_TCAApp.swift in Sources */,
 			);

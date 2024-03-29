@@ -15,11 +15,18 @@ class RealmManager {
     
     private init() { }
     
-    func getSortedTodoList() -> [TodoModel] {
+    func getSortedTodoList(type: TodoCase) -> [TodoModel] {
         let todo = realm.objects(TodoModel.self)
-        let uncompletedTodos = todo.filter("completed == false").sorted(byKeyPath: "createAt", ascending: false)
-        let completedTodos = todo.filter("completed == true").sorted(byKeyPath: "createAt", ascending: false)
-        return Array(uncompletedTodos) + Array(completedTodos)
+        
+        switch type {
+        case .preview:
+            return Array(todo)
+            
+        case .main:
+            let uncompletedTodos = todo.filter("completed == false").sorted(byKeyPath: "createAt", ascending: false)
+            let completedTodos = todo.filter("completed == true").sorted(byKeyPath: "createAt", ascending: false)
+            return Array(uncompletedTodos) + Array(completedTodos)
+        }
     }
     
     func writeTodoList(_ title: String) {
@@ -49,6 +56,7 @@ class RealmManager {
         do {
             try realm.write {
                 todoItem.completed.toggle()
+                realm.add(todoItem, update: .modified)
             }
         } catch {
             print("Error toggling completion status: \(error.localizedDescription)")

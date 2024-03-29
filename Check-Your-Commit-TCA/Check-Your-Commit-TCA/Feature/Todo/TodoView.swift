@@ -35,7 +35,7 @@ struct TodoView: View {
                             HStack {
                                 Button {
                                     RealmManager.shared.toggleCompleted(todo)
-                                    store.send(.getTodoList)
+                                    store.send(.getTodoList(.preview))
                                 } label: {    // 완료여부에 따라 이미지 변경
                                     Image(systemName: todo.completed ? "checkmark.circle.fill" : "circle")
                                 }
@@ -52,7 +52,7 @@ struct TodoView: View {
                             for todo in todosToDelete {
                                 RealmManager.shared.deleteTodoList(todo)
                             }
-                            store.send(.getTodoList) // 삭제 후 리스트 갱신
+                            store.send(.getTodoList(.preview)) // 삭제 후 리스트 갱신
                         }
                         
                         if store.isTextFieldShowing {   // textField 생성 조건문
@@ -62,7 +62,7 @@ struct TodoView: View {
                                 TextField("일정을 입력해주세요", text: $store.textField.sending(\.textFieldChange), onCommit: {
                                     if !store.textField.isEmpty {
                                         RealmManager.shared.writeTodoList(store.textField)
-                                        store.send(.getTodoList)
+                                        store.send(.getTodoList(.preview))
                                     }
                                     store.send(.testFieldShowing(false))
                                 })
@@ -104,7 +104,7 @@ struct TodoView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButtonView())
         .onAppear {
-            store.send(.getTodoList)
+            store.send(.getTodoList(.main))
         }
     }
 }

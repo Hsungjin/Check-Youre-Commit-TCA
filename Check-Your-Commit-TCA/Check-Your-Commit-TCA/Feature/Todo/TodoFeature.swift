@@ -18,7 +18,7 @@ struct TodoFeature {
     }
     
     enum Action {
-        case getTodoList
+        case getTodoList(TodoCase)
         case textFieldChange(String)
         case testFieldShowing(Bool)
     }
@@ -27,9 +27,16 @@ struct TodoFeature {
         Reduce { state, action in
             switch action {
                 
-            case .getTodoList:
-                state.sortedTodoModel = RealmManager.shared.getSortedTodoList()
-                return .none
+            case let .getTodoList(input):
+                switch input {
+                case .main:
+                    state.sortedTodoModel = RealmManager.shared.getSortedTodoList(type: .main)
+                    return .none
+                    
+                case .preview:
+                    state.sortedTodoModel = RealmManager.shared.getSortedTodoList(type: .preview)
+                    return .none
+                }
                 
             case let .textFieldChange(input):
                 state.textField = input

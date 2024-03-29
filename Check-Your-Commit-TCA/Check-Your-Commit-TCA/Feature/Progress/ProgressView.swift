@@ -23,7 +23,7 @@ struct ProgressView: View {
 //                              progress: $store.progressDay.sending(\.getProgressDay)).moveDinosaur()
 //                }
 //                
-                //                 pink dinosaur button view
+                // pink dinosaur button view
                 ZStack(alignment: .top) {
                     Button {
                         store.send(.showModal)
